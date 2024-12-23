@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages - Event Management Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script type="text/javascript" src="js/script3.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">Event Management Dashboard</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="people.html">People</a></li>
+                <li><a href="messages.html" class="active">Messages</a></li>
+                <li><a href="calendar.html">Calendar</a></li>
+                <li><a href="settings.html">Settings</a></li>
+            </ul>
+        </nav>
+        <!-- Action Buttons (Profile, Revenue) -->
+        <div class="action-buttons">
+            <button class="btn create-event">Create New Event</button>
+            <span class="revenue">Revenue: $2500.00</span>
+            <img src="profiles.jpg" alt="Profile" class="profile-pic">
+        </div>
+    </header>
+
+    <!-- Messages Main -->
+    <main class="messages">
+        <h1>Messages</h1>
+        <button class="btn send-message" onclick="openSendMessageForm()">Send Message</button>
+
+        <!-- Message Form -->
+        <div id="message-form-container" style="display:none;">
+            <form id="message-form">
+                <label for="contact-type">Send to:</label>
+                <select id="contact-type" required>
+                    <option value="phone">Phone Number</option>
+                    <option value="email">Email Address</option>
+                </select><br><br>
+
+                <label for="contact-value">Enter Phone or Email:</label>
+                <input type="text" id="contact-value" placeholder="Enter phone number or email" required><br><br>
+
+                <label for="message-content">Message:</label>
+                <textarea id="message-content" placeholder="Enter your message" required></textarea><br><br>
+
+                <button type="submit" class="btn">Send Message</button>
+                <button type="button" class="btn" onclick="closeSendMessageForm()">Cancel</button>
+            </form>
+        </div>
+
+        <!-- Sent Messages -->
+        <div class="message-list">
+            <!-- Dynamic Message List Will Appear Here -->
+        </div>
+    </main>
+</body>
+</html>

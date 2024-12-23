@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar - Event Management Dashboard</title>
+    <!-- FullCalendar CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.2.0/fullcalendar.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.2.0/fullcalendar.min.js"></script>
+    <script type="module" src="js/script4.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">Event Management Dashboard</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="people.html">People</a></li>
+                <li><a href="messages.html">Messages</a></li>
+                <li><a href="calendar.html" class="active">Calendar</a></li>
+                <li><a href="settings.html">Settings</a></li>
+            </ul>
+        </nav>
+        <!-- Action Buttons (Profile, Revenue) -->
+        <div class="action-buttons">
+            <button class="btn create-event">Create New Event</button>
+            <span class="revenue">Revenue: $2500.00</span>
+            <img src="profiles.jpg" alt="Profile" class="profile-pic">
+        </div>
+    </header>
+
+    <!-- Calendar Main -->
+    <main class="calendar">
+        <h1>Event Calendar</h1>
+        <div id="calendar"></div>
+        <!-- Calendar Integration (e.g., using FullCalendar.js) -->
+    </main>
+
+    <!-- FullCalendar JS (Dependencies for FullCalendar) -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#calendar').fullCalendar({
+                events: [
+                    // Sample events for 2025
+                    { 
+                        title: 'New Year\'s Day', 
+                        start: '2025-01-01', 
+                        description: 'Celebrating the start of the year'
+                    },
+                    { 
+                        title: 'Independence Day', 
+                        start: '2025-07-04', 
+                        description: 'National Independence Day celebration'
+                    },
+                    { 
+                        title: 'Christmas Day', 
+                        start: '2025-12-25', 
+                        description: 'Christmas celebrations'
+                    },
+                    { 
+                        title: 'Labor Day', 
+                        start: '2025-09-01', 
+                        description: 'Labor Day holiday'
+                    },
+                    { 
+                        title: 'Thanksgiving Day', 
+                        start: '2025-11-27', 
+                        description: 'Thanksgiving celebrations'
+                    },
+                    { 
+                        title: 'Diwali', 
+                        start: '2025-11-14', 
+                        description: 'Festival of Lights'
+                    },
+                    { 
+                        title: 'Easter', 
+                        start: '2025-04-20', 
+                        description: 'Easter Sunday celebration'
+                    }
+                ]
+            });
+        });
+    </script>
+</body>
+</html>

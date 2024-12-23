@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script type="text/javascript" src="js/script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">Event Management Dashboard</div>
+        <nav>
+            <ul class="nav-links">
+                <ul class="nav-links">
+                    <li><a href="dashboard.html" class="active">Dashboard</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="people.html">People</a></li>
+                    <li><a href="messages.html">Messages</a></li>
+                    <li><a href="calendar.html">Calendar</a></li>
+                    <li><a href="settings.html">Settings</a></li>
+                </ul> 
+            </ul>
+        </nav>
+        <div class="action-buttons">
+            <button class="btn create-event">Create New Event</button>
+            <span class="revenue">Revenue: $2500.00</span>
+            <img src="profiles.jpg" alt="Profile" class="profile-pic">
+        </div>
+    </header>
+
+    <!-- Dashboard Main -->
+    <main class="dashboard">
+        <section class="grid">
+            <!-- Net Sales -->
+            <div class="card net-sales">
+                <h3>Net Sales</h3>
+                <div class="chart">
+                    <p>This Week: <strong>$5500.00</strong></p>
+                    <p>Previous Week: <strong>$6550.00</strong></p>
+                    <canvas id="salesChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Tickets -->
+            <div class="card tickets">
+                <h3>Tickets</h3>
+                <p class="stat">90 <span>Sold Seats</span></p>
+                <p>Online Revenue: <strong>$5500.00</strong></p>
+                <p>Total Seats: <strong>350</strong></p>
+            </div>
+
+            <!-- Upcoming Events -->
+            <div class="card upcoming-events">
+                <h3>Upcoming Events</h3>
+                <ul>
+                    <!-- Dynamic Event List Will Appear Here -->
+                </ul>
+            </div>
+
+            <!-- Recent Sells -->
+            <div class="card recent-sells">
+                <h3>Recent Sells</h3>
+                <ul>
+                    <li><span>John Doe</span> - $165</li>
+                    <li><span>Jessica William</span> - $165</li>
+                    <li><span>Rock Smith</span> - $310</li>
+                    <li><span>Johnson</span> - $165</li>
+                </ul>
+            </div>
+
+            <!-- Total Seats -->
+            <div class="card total-seats">
+                <h3>Total Seats</h3>
+                <p class="stat">350 <span>Total Seats</span></p>
+                <p>Sold Seats: <strong>90</strong></p>
+            </div>
+
+            <!-- Online Sells -->
+            <div class="card online-sells">
+                <h3>Online Sells</h3>
+                <p>Rough Cost: <strong>$7500.00</strong></p>
+                <canvas id="onlineSellsChart"></canvas>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
